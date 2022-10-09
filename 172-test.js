@@ -250,3 +250,12 @@ btnSort.addEventListener('click', function (e) {
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+
+//use remainder operator for every nth time
+labelBalance.addEventListener('click', function () {
+  [...document.querySelectorAll('.movements__row')].forEach(function (row, i) {
+    if (i % 2 === 0) row.style.backgroundColor = 'orangered'; //painting every 2nd row/ every other row (0, 2, 4, 6, 8, 12) probability: 1/2
+    // if (i % 3 === 0) row.style.backgroundColor = 'blue'; //painting every 2nd row/ every other row (0, 3, 6, 9, 12) probability: 1/3
+    // 0/anything === 0
+  });
+});
